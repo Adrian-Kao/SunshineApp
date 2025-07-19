@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunshine 幼兒園 App</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #e7f7d1; /* 亮綠色背景 */
+    }
+    header {
+      background-color: #ffe14d; /* 黃色 */
+      color: #1a1a1a;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .main {
+      padding: 1rem;
+    }
+    .button {
+      display: block;
+      width: 90%;
+      max-width: 300px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: #f44336; /* 紅色 */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    .button:active {
+      background-color: #c62828;
+    }
+    .textarea {
+      display: block;
+      width: 90%;
+      max-width: 300px;
+      margin: 0 auto 1rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      resize: none;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 1rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    ☀️ Sunshine 幼兒園接送通知
+  </header>
+  <div class="main">
+    <textarea class="textarea" rows="3" placeholder="留言給老師，例如：快到了喔！"></textarea>
+    <button class="button" onclick="sendNotification()">
+      📤 通知老師我快到了
+    </button>
+  </div>
+  <footer>
+    Sunshine 幼兒園 ｜ 設計配色依照官方 Logo
+  </footer>
+
+  <script>
+    function sendNotification() {
+      const message = document.querySelector(".textarea").value;
+      alert("已發送訊息給老師：" + (message || "快到了喔！"));
+      document.querySelector(".textarea").value = "";
+    }
+  </script>
+</body>
+</html>
