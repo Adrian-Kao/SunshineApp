@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>快到了通知</title>
+  <style>
+    body { background: #e7f7d1; font-family: sans-serif; margin: 0; }
+    header { background: #ffe14d; text-align: center; padding: 1rem; font-weight: bold; }
+    .main { padding: 2rem; text-align: center; }
+    .button {
+      padding: 1rem;
+      background: #2196f3;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>🚗 快到了通知</header>
+  <div class="main">
+    <button class="button" onclick="notify()">📤 通知老師我快到了</button>
+  </div>
+  <script>
+    function notify() {
+      alert("已通知老師：家長快到了喔！");
+    }
+  </script>
+</body>
+</html>
